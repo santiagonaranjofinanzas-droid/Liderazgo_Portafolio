@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import bannerImg from './assets/banner.png';
+import enfoquesImg from './assets/enfoques.png';
+import estilosImg from './assets/estilos.png';
+import casoImg from './assets/caso.png';
+import reflexionImg from './assets/reflexion.png';
+import actitudesImg from './assets/actitudes.png';
 
-const ProjectCard = ({ title, icon, point, tech, description, link, onClick, delay }) => (
+const ProjectCard = ({ title, img, point, tech, description, link, onClick, delay }) => (
   <div className={`card animate-fade-in ${delay}`}>
-    <div className="card-header">
-      <div className="card-icon">{icon}</div>
+    <div className="card-image-container">
+      <img src={img} alt={title} className="card-image" />
     </div>
     <div className="card-body">
       <div className="card-title">{title}</div>
@@ -106,7 +111,7 @@ El liderazgo pertinente combina la resiliencia innata con una toma de decisiones
           <div className="welcome-box">
             <p className="welcome-text">
               Bienvenida, Docente. Este portafolio centraliza el desarrollo de la Actividad N° 02, 
-              donde exploramos los diversos enfoques de liderazgo aplicados a contextos reales.
+              presentando una visión integral de los modelos de gestión y estilos de liderazgo actuales.
             </p>
           </div>
         </div>
@@ -119,41 +124,50 @@ El liderazgo pertinente combina la resiliencia innata con una toma de decisiones
 
           <div className="grid">
             <ProjectCard 
-              title="Mapas Conceptuales y Mentales"
-              icon="🕸️"
-              point="Actividad 1 & 5"
+              title="Enfoques de liderazgo"
+              img={enfoquesImg}
+              point="Mapa conceptual"
               tech="Prezi"
-              description="Análisis visual de los enfoques y actitudes del liderazgo contemporáneo."
+              description="Análisis visual de los marcos teóricos: Rasgos, Comportamiento y Contingencia."
               link="https://prezi.com/view/fn2Bnwn7rPpuRhIoBb2Y/?referral_token=IOHVN7lnB3FN"
               delay="delay-1"
             />
             <ProjectCard 
-              title="Cuadro Comparativo de Estilos"
-              icon="📋"
-              point="Actividad 2"
+              title="Estilos de liderazgo"
+              img={estilosImg}
+              point="Cuadro comparativo"
               tech="Genially"
-              description="Comparativa de estilos transaccionales, transformacionales y situacionales."
+              description="Comparativa detallada de estilos transaccionales, transformacionales y situacionales."
               link="https://view.genially.com/69e17c774e4104b2992bd8b4"
               delay="delay-2"
             />
             <ProjectCard 
-              title="Estudio de Caso Práctico"
-              icon="💼"
-              point="Actividad 3"
+              title="Estudio de caso"
+              img={casoImg}
+              point="Análisis Práctico"
               tech="Prezi"
-              description="Aplicación del liderazgo situacional en una institución del sector público."
+              description="Caso institucional aplicado al contexto ecuatoriano y liderazgo situacional."
               link="https://prezi.com/view/09nv8XX7dQJYAZqWoyPt/?referral_token=GzHVnelnB3FN"
               delay="delay-3"
             />
             <ProjectCard 
-              title="Reflexión Argumentada"
-              icon="🧠"
-              point="Actividad 4"
-              tech="Ensayo"
-              description="Análisis crítico sobre la pertinencia de modelos en contextos de alta presión."
+              title="Reflexión argumentada"
+              img={reflexionImg}
+              point="Ensayo Crítico"
+              tech="Académico"
+              description="Análisis sobre la pertinencia de modelos de liderazgo en entornos de crisis y alta presión."
               link="#"
               onClick={() => setSelectedContent({ title: "Ensayo: Reflexión Argumentada", content: reflectionDraft })}
               delay="delay-4"
+            />
+            <ProjectCard 
+              title="Actitudes de líder y seguidores"
+              img={actitudesImg}
+              point="Mapa mental"
+              tech="Investigación"
+              description="Exploración de la dinámica interactiva entre líderes y sus equipos de trabajo."
+              link="#"
+              delay="delay-5"
             />
           </div>
         </section>
@@ -161,12 +175,17 @@ El liderazgo pertinente combina la resiliencia innata con una toma de decisiones
         {/* Bibliography Section */}
         <section className="bibliography animate-fade-in delay-4">
           <h3 className="section-title">📚 BIBLIOGRAFÍA ACADÉMICA</h3>
-          <ToggleItem title="Bibliografía Básica (Normas APA)">
-            Lussier, R. N., & Achua, C. F. (2016). Liderazgo: Teoría, aplicación y desarrollo de habilidades. 6ta Edición. Cengage Learning.
-          </ToggleItem>
-          <ToggleItem title="Recursos Complementarios">
-            Material de estudio proporcionado por la Universidad, casos de gestión y modelos de contingencia.
-          </ToggleItem>
+          <div className="bib-grid">
+            <ul className="bib-list">
+              <li>Ekosnegocios. (2022, 30 de marzo). Las 25 mujeres en el Top 100 Líderes empresariales de Ecuador. Ekosnegocios.</li>
+              <li>El Universo. (2026, 12 de febrero). Isabel Noboa: 'Un líder no solo guía: habilita, inspira y cuida'. El Universo.</li>
+              <li>Nobis Holding. (2023, 25 de octubre). Isabel Noboa Pontón, la empresaria que conjuga templanza y amor por los negocios. Nobis Holding.</li>
+              <li>Nobis Holding. (2023, 25 de octubre). Isabel Noboa, la empresaria ecuatoriana referente en el Ranking de las 500 personas más influyentes de América Latina. Nobis Holding.</li>
+              <li>Trejo, J. (2026, 21 de marzo). Mapa conceptual de los estilos y características de liderazgo [Presentación]. Prezi.</li>
+              <li>Velasco Vergara, L. M. (2026, 17 de abril). Estilos de liderazgo [Presentación interactiva]. Genially.</li>
+              <li>Lussier, R. N., & Achua, C. F. (2016). Liderazgo: Teoría, aplicación y desarrollo de habilidades. 6ta Edición. Cengage Learning.</li>
+            </ul>
+          </div>
         </section>
       </main>
 
