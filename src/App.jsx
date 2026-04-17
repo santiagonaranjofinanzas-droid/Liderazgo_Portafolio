@@ -14,11 +14,11 @@ const ProjectCard = ({ title, icon, point, tech, description, link, onClick, del
       <p className="card-description">{description}</p>
       {link !== "#" ? (
         <a href={link} target="_blank" rel="noopener noreferrer" className="card-btn">
-          Abrir {title.split(' ')[0]} ({tech})
+          Abrir {title.split(' ')[0]}
         </a>
       ) : (
         <button className="card-btn" onClick={onClick}>
-          Ver Borrador AI
+          Ver Contenido
         </button>
       )}
     </div>
@@ -75,16 +75,29 @@ No hay un estilo único. En crisis extremas, el liderazgo autocrático/directivo
 **Conclusión**
 El liderazgo pertinente combina la resiliencia innata con una toma de decisiones informada y una profunda capacidad de adaptación al entorno cambiante.`;
 
+  const groupMembers = [
+    "José Ignacio Chico Coronel",
+    "Jeniffer Katherin Chorlango Oña",
+    "Daniela Alejandra Espín Chávez",
+    "Santiago Alejandro Naranjo Reyes",
+    "Leidy Marilyn Velasco Vergara"
+  ];
+
   return (
     <div className="app-container">
+      {/* Banner Section */}
       <header className="banner">
         <img src={bannerImg} alt="Leadership Banner" />
         <div className="banner-overlay">
-          <h1 className="banner-title">Portafolio de Liderazgo: Actividad N° 02</h1>
-          <p className="banner-subtitle">Grupo #. Apellidos y Nombres, Asignatura</p>
+          <div className="header-badge">Grupo 5 • NRC: 29950</div>
+          <h1 className="banner-title">Portafolio de Liderazgo</h1>
+          <div className="member-list">
+            {groupMembers.join(' | ')}
+          </div>
         </div>
       </header>
 
+      {/* Main Content */}
       <main className="main-content">
         <div className="page-header animate-fade-in">
           <h2 className="page-title">
@@ -92,66 +105,74 @@ El liderazgo pertinente combina la resiliencia innata con una toma de decisiones
           </h2>
           <div className="welcome-box">
             <p className="welcome-text">
-              ¡Conexión NotebookLM establecida! He analizado tus fuentes y generado borradores para las tareas pendientes. 
-              Haz clic en "Ver Borrador AI" en las tarjetas de abajo.
+              Bienvenida, Docente. Este portafolio centraliza el desarrollo de la Actividad N° 02, 
+              donde exploramos los diversos enfoques de liderazgo aplicados a contextos reales.
             </p>
           </div>
         </div>
 
+        {/* Gallery Section */}
         <section>
           <div className="gallery-nav animate-fade-in delay-1">
-            <span className="active">📦 Galería Directa</span>
-            <span>🤖 Asistente NotebookLM</span>
+            <span className="active">📦 Galería de Actividades</span>
           </div>
 
           <div className="grid">
             <ProjectCard 
               title="Mapas Conceptuales y Mentales"
               icon="🕸️"
-              point="Points 1 & 5"
+              point="Actividad 1 & 5"
               tech="Prezi"
-              description="Enfoques de Liderazgo & Actitudes del Líder."
+              description="Análisis visual de los enfoques y actitudes del liderazgo contemporáneo."
               link="https://prezi.com/view/fn2Bnwn7rPpuRhIoBb2Y/?referral_token=IOHVN7lnB3FN"
               delay="delay-1"
             />
             <ProjectCard 
               title="Cuadro Comparativo de Estilos"
               icon="📋"
-              point="Point 2"
+              point="Actividad 2"
               tech="Genially"
-              description="Tarea, Relaciones y Mixtos con ejemplos."
+              description="Comparativa de estilos transaccionales, transformacionales y situacionales."
               link="https://view.genially.com/69e17c774e4104b2992bd8b4"
               delay="delay-2"
             />
             <ProjectCard 
               title="Estudio de Caso Práctico"
               icon="💼"
-              point="Point 3"
+              point="Actividad 3"
               tech="Prezi"
-              description="Caso Ecuatoriano: Liderazgo Situacional en una Institución específica."
+              description="Aplicación del liderazgo situacional en una institución del sector público."
               link="https://prezi.com/view/09nv8XX7dQJYAZqWoyPt/?referral_token=GzHVnelnB3FN"
               delay="delay-3"
             />
             <ProjectCard 
               title="Reflexión Argumentada"
               icon="🧠"
-              point="Point 4"
-              tech="NotebookLM"
-              description="Reflexión sobre modelos en alta presión generada por AI."
+              point="Actividad 4"
+              tech="Ensayo"
+              description="Análisis crítico sobre la pertinencia de modelos en contextos de alta presión."
               link="#"
-              onClick={() => setSelectedContent({ title: "Borrador AI: Reflexión Argumentada", content: reflectionDraft })}
+              onClick={() => setSelectedContent({ title: "Ensayo: Reflexión Argumentada", content: reflectionDraft })}
               delay="delay-4"
             />
           </div>
         </section>
 
+        {/* Bibliography Section */}
         <section className="bibliography animate-fade-in delay-4">
-          <h3 className="section-title">💡 BIBLIOGRAFÍA ACADÉMICA</h3>
-          <ToggleItem title="Fuentes Primarias (NotebookLM)">
-            Lussier, R. N., & Achua, C. F. (2016). Liderazgo: Teoría, aplicación y desarrollo de habilidades.
+          <h3 className="section-title">📚 BIBLIOGRAFÍA ACADÉMICA</h3>
+          <ToggleItem title="Bibliografía Básica (Normas APA)">
+            Lussier, R. N., & Achua, C. F. (2016). Liderazgo: Teoría, aplicación y desarrollo de habilidades. 6ta Edición. Cengage Learning.
+          </ToggleItem>
+          <ToggleItem title="Recursos Complementarios">
+            Material de estudio proporcionado por la Universidad, casos de gestión y modelos de contingencia.
           </ToggleItem>
         </section>
       </main>
+
+      <footer className="footer animate-fade-in delay-4">
+        <p>© 2026 Universidad - Departamento de Ciencias Humanas y Sociales</p>
+      </footer>
 
       <Modal 
         isOpen={!!selectedContent} 
