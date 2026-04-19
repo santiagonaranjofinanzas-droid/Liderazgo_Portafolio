@@ -77,11 +77,31 @@ body {
 }
 
 .member-list {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   max-width: 900px;
-  line-height: 1.5;
-  font-weight: 500;
+  margin-top: 5px;
+}
+
+.member-badge {
+  background: var(--glass);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--border);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.member-badge:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* Main Content */
@@ -259,10 +279,32 @@ body {
 
 .footer {
   text-align: center;
-  padding: 60px;
+  padding: 80px 20px;
   border-top: 1px solid var(--border);
+  background: linear-gradient(to top, var(--bg-secondary), transparent);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-uni {
   color: var(--text-secondary);
   font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.footer-credit {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #fff, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 /* Modal */

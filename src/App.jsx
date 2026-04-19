@@ -82,7 +82,9 @@ function App() {
           <div className="header-badge">Grupo 5 • NRC: 29950</div>
           <h1 className="banner-title">Portafolio de Liderazgo</h1>
           <div className="member-list">
-            {groupMembers.join(' | ')}
+            {groupMembers.map((member, index) => (
+              <span key={index} className="member-badge">{member}</span>
+            ))}
           </div>
         </div>
       </header>
@@ -174,7 +176,10 @@ function App() {
       </main>
 
       <footer className="footer animate-fade-in delay-4">
-        <p>© 2026 Universidad - Departamento de Ciencias Humanas y Sociales</p>
+        <div className="footer-content">
+          <p className="footer-uni">© 2026 Universidad - Departamento de Ciencias Humanas y Sociales</p>
+          <p className="footer-credit">Diseñado y Desarrollado con ⚡ por Santiago Naranjo</p>
+        </div>
       </footer>
 
       <Modal 
