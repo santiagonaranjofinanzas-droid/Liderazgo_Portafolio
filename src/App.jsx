@@ -5,6 +5,7 @@ import estilosImg from './assets/estilos.png';
 import casoImg from './assets/caso.png';
 import reflexionImg from './assets/reflexion.png';
 import actitudesImg from './assets/actitudes.png';
+import ecuadorImg from './assets/ecuador.png';
 
 const ProjectCard = ({ title, img, point, tech, description, link, onClick, delay }) => (
   <div className={`card animate-fade-in ${delay}`}>
@@ -164,10 +165,19 @@ El liderazgo pertinente combina la resiliencia innata con una toma de decisiones
               title="Actitudes de líder y seguidores"
               img={actitudesImg}
               point="Mapa mental"
-              tech="Investigación"
+              tech="MindMeister"
               description="Exploración de la dinámica interactiva entre líderes y sus equipos de trabajo."
-              link="#"
+              link="https://mm.tt/map/3984713463?t=LJl06llNe5"
               delay="delay-5"
+            />
+            <ProjectCard 
+              title="Liderazgo en Ecuador"
+              img={ecuadorImg}
+              point="Resurso Interactivo"
+              tech="Microsoft Sway"
+              description="Estilos de liderazgo aplicados al contexto socio-empresarial ecuatoriano."
+              link="https://sway.cloud.microsoft/zKKRrraGpPdPUFTT?ref=Link"
+              delay="delay-6"
             />
           </div>
         </section>
@@ -182,6 +192,8 @@ El liderazgo pertinente combina la resiliencia innata con una toma de decisiones
               <li>Nobis Holding. (2023, 25 de octubre). Isabel Noboa Pontón, la empresaria que conjuga templanza y amor por los negocios. Nobis Holding.</li>
               <li>Nobis Holding. (2023, 25 de octubre). Isabel Noboa, la empresaria ecuatoriana referente en el Ranking de las 500 personas más influyentes de América Latina. Nobis Holding.</li>
               <li>Trejo, J. (2026, 21 de marzo). Mapa conceptual de los estilos y características de liderazgo [Presentación]. Prezi.</li>
+              <li>Naranjo Reyes, S. A. (2026, 19 de abril). Estilos de Liderazgo en el Contexto Ecuatoriano [Presentación]. Microsoft Sway.</li>
+              <li>Naranjo Reyes, S. A. (2026, 19 de abril). Actitudes del líder y seguidores [Mapa mental]. MindMeister.</li>
               <li>Velasco Vergara, L. M. (2026, 17 de abril). Estilos de liderazgo [Presentación interactiva]. Genially.</li>
               <li>Lussier, R. N., & Achua, C. F. (2016). Liderazgo: Teoría, aplicación y desarrollo de habilidades. 6ta Edición. Cengage Learning.</li>
             </ul>
