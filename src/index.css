@@ -297,14 +297,11 @@ body {
 }
 
 .footer-credit {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-secondary);
   letter-spacing: 0.5px;
-  background: linear-gradient(90deg, #fff, var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  opacity: 0.8;
 }
 
 /* Modal */
