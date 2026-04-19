@@ -64,22 +64,6 @@ const Modal = ({ isOpen, onClose, title, content }) => {
 function App() {
   const [selectedContent, setSelectedContent] = useState(null);
 
-  const reflectionDraft = `**REFLEXIÓN ARGUMENTADA: Pertinencia de los Modelos de Liderazgo en Contextos de Alta Presión**
-
-**Introducción**
-En contextos de alta presión, caracterizados por la incertidumbre y la crisis, el liderazgo se convierte en el pilar fundamental para guiar a los grupos hacia metas compartidas.
-
-**1. Enfoque de Rasgos**
-La resiliencia y la integridad son primordiales. Un líder debe poseer empatía para mantener la armonía emocional del equipo en crisis.
-
-**2. Enfoque de Comportamiento**
-La toma de decisiones ágil y la comunicación efectiva son determinantes. Evaluar riesgos y orientar con claridad es vital.
-
-**3. Enfoque de Contingencia**
-No hay un estilo único. En crisis extremas, el liderazgo autocrático/directivo asegura rapidez, mientras que el liderazgo situacional permite adaptarse a la incertidumbre.
-
-**Conclusión**
-El liderazgo pertinente combina la resiliencia innata con una toma de decisiones informada y una profunda capacidad de adaptación al entorno cambiante.`;
 
   const groupMembers = [
     "José Ignacio Chico Coronel",
@@ -152,13 +136,12 @@ El liderazgo pertinente combina la resiliencia innata con una toma de decisiones
               delay="delay-3"
             />
             <ProjectCard 
-              title="Reflexión argumentada"
-              img={reflexionImg}
-              point="Ensayo Crítico"
-              tech="Académico"
-              description="Análisis sobre la pertinencia de modelos de liderazgo en entornos de crisis y alta presión."
-              link="#"
-              onClick={() => setSelectedContent({ title: "Ensayo: Reflexión Argumentada", content: reflectionDraft })}
+              title="Reflexión Argumentada"
+              img={ecuadorImg}
+              point="Liderazgo en Ecuador"
+              tech="Microsoft Sway"
+              description="Análisis sobre la pertinencia de modelos de liderazgo en contextos de alta presión y su aplicación en el entorno ecuatoriano."
+              link="https://sway.cloud.microsoft/zKKRrraGpPdPUFTT?ref=Link"
               delay="delay-4"
             />
             <ProjectCard 
@@ -169,15 +152,6 @@ El liderazgo pertinente combina la resiliencia innata con una toma de decisiones
               description="Exploración de la dinámica interactiva entre líderes y sus equipos de trabajo."
               link="https://mm.tt/map/3984713463?t=LJl06llNe5"
               delay="delay-5"
-            />
-            <ProjectCard 
-              title="Liderazgo en Ecuador"
-              img={ecuadorImg}
-              point="Resurso Interactivo"
-              tech="Microsoft Sway"
-              description="Estilos de liderazgo aplicados al contexto socio-empresarial ecuatoriano."
-              link="https://sway.cloud.microsoft/zKKRrraGpPdPUFTT?ref=Link"
-              delay="delay-6"
             />
           </div>
         </section>
